@@ -30,16 +30,16 @@ const ExpressionsList = () => {
             <div className="overflow-hidden border border-gray-200 md:rounded-lg">
               <table className="min-w-full divide-y divide-gray-200">
                 <thead className="bg-gray-50">
-                  <tr>
+                  <tr className="divide-x divide-gray-200">
                     <th
                       scope="col"
-                      className="px-4 py-3.5 text-center text-sm font-normal text-gray-700"
+                      className="px-4  py-3.5 ml-4 text-left text-sm font-normal text-gray-700"
                     >
                       <span>Metric</span>
                     </th>
                     <th
                       scope="col"
-                      className="px-12 py-3.5 text-center text-sm font-normal text-gray-700"
+                      className="px-12 py-3.5 ml-4 text-left text-sm font-normal text-gray-700"
                     >
                       Expression
                     </th>
@@ -50,13 +50,10 @@ const ExpressionsList = () => {
                 </thead>
                 <tbody className="divide-y divide-gray-200 bg-white">
                   {metricData.map((item) => (
-                    <tr key={item.metric}>
+                    <tr key={item.metric} className="divide-x divide-gray-200">
                       <td className="whitespace-nowrap px-4 py-4">
                         <div className="flex items-center">
-                          <div className="h-10 w-10 flex-shrink-0">
-                            {/* You can add an image here if needed */}
-                          </div>
-                          <div className="ml-4 text-center">
+                          <div className="ml-4 text-left">
                             <div className=" text-sm font-medium text-gray-900">
                               {item.metric}
                             </div>
