@@ -12,6 +12,7 @@ const db = mysql.createConnection({
   password: '',
   database: 'metrics',
 });
+ 
 
 
 db.connect((err) => {
