@@ -1,8 +1,12 @@
 const express = require('express');
 const mysql = require('mysql2');
 
+<<<<<<< HEAD
 const app = express();
 const PORT = process.env.PORT || 3000;
+=======
+var indexRouter = require("./routes/index");
+>>>>>>> 55e754a26d51b9d22994e4a9c215e6d7e1a5b87a
 
 app.use(express.json());
 
