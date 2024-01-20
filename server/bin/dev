@@ -4,7 +4,7 @@ const nodemon = require("nodemon");
 ngrok
   .connect({
     proto: "http",
-    addr: "5000",
+    addr: "4040",
   })
   .then((url) => {
     console.log(`ngrok tunnel opened at: ${url}`);

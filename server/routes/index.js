@@ -4,7 +4,8 @@ const expressionMeric = require("../controllers/expressionMetric");
 
 /* GET home page. */
 router.get("/", function (req, res, next) {
-  expressionMeric.getMetricList();
+  console.log("indside get");
+  expressionMeric.getMetricList(req, res, next);
 });
 
 router.get("/:metricId", (req, res, next) => {
