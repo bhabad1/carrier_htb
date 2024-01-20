@@ -1,4 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+
+const API_URL = "";
 
 const ExpressionsList = () => {
   const [metricData, setMetricData] = useState([
@@ -6,6 +8,8 @@ const ExpressionsList = () => {
     { metric: "Load", Expression: "avg_runtime" },
     { metric: "kW/Ton", Expression: "1.7325*09*abc" },
   ]);
+
+  useEffect(() => {}, []);
   return (
     <section className="mx-auto w-full max-w-7xl px-4 py-4">
       <div className="flex flex-col space-y-4 md:flex-row md:items-center md:justify-between md:space-y-0">
@@ -33,13 +37,13 @@ const ExpressionsList = () => {
                   <tr className="divide-x divide-gray-200">
                     <th
                       scope="col"
-                      className="px-4  py-3.5 ml-4 text-left text-sm font-normal text-gray-700"
+                      className="px-7 w-1/3 py-3.5 ml-4 text-left text-lg  font-extrabold fon text-gray-700"
                     >
                       <span>Metric</span>
                     </th>
                     <th
                       scope="col"
-                      className="px-12 py-3.5 ml-4 text-left text-sm font-normal text-gray-700"
+                      className="px-12 w-2/3 py-3.5 ml-4 text-left text-lg font-extrabold text-gray-700"
                     >
                       Expression
                     </th>
@@ -50,7 +54,10 @@ const ExpressionsList = () => {
                 </thead>
                 <tbody className="divide-y divide-gray-200 bg-white">
                   {metricData.map((item) => (
-                    <tr key={item.metric} className="divide-x divide-gray-200">
+                    <tr
+                      key={item.metric}
+                      className="divide-x divide-gray-200 hover:cursor-pointer"
+                    >
                       <td className="whitespace-nowrap px-4 py-4">
                         <div className="flex items-center">
                           <div className="ml-4 text-left">
